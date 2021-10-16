@@ -108,7 +108,7 @@ console.log('---');
     // Jūsų kodas
     const result = [];
     for (let i = 0; i < arr.length; i++) {
-      result.push(arr[i] % 2 === 0);
+      result.push(arr[i] % 2 ===0);
     }
     return result;
   }
@@ -128,7 +128,7 @@ console.log('---');
     // Jūsų kodas
     const result = [];
     for (let i = 0; i < arr.length; i++) {
-      result.push(arr[i] % 2 !== 0);
+      result.push(arr[i] % 2 !==0);
     }
     return result;
   }
@@ -206,7 +206,7 @@ console.log('---');
 {
   function absArrElements(arr) {
     // Jūsų kodas
-    const result = [];
+      const result = [];
     for (let i = 0; i < arr.length; i++) {
       result.push(Math.round(arr[i]));
     }

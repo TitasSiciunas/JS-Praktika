@@ -3,15 +3,16 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
   // Funkcijos deklaravimas
   function printCapital(str) {
     // code ...
+    return console.log(str.toUpperCase());
   }
-  // console.log('---');
-  // console.log("abcd");
-  // printCapital("abcd");
-  // console.log("AAAA");
-  // printCapital("AAAA");
-  // console.log("aBcD");
-  // printCapital("aBcD");
-  // console.log('---');
+  console.log('---');
+  console.log("abcd");
+  printCapital("abcd");
+  console.log("AAAA");
+  printCapital("AAAA");
+  console.log("aBcD");
+  printCapital("aBcD");
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -21,15 +22,16 @@ console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raid
   // Funkcijos deklaravimas
   function printLower(str) {
     // code ...
+    return console.log(str.toLowerCase());
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printLower("abcd");
-  // console.log("AAAA");
-  // printLower("AAAA");
-  // console.log("aBcD");
-  // printLower("aBcD");
-  // console.log('---');
+  console.log('---');
+  console.log("ABCD");
+  printLower("abcd");
+  console.log("AAAA");
+  printLower("AAAA");
+  console.log("aBcD");
+  printLower("aBcD");
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -39,15 +41,16 @@ console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmaj
   // Funkcijos deklaravimas
   function printFirstLetter(str) {
     // code ...
+    return console.log(str.slice(0, 1));
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printFirstLetter("abcd");
-  // console.log("AAAA");
-  // printFirstLetter("AAAA");
-  // console.log("aBcD");
-  // printFirstLetter("aBcD");
-  // console.log('---');
+  console.log('---');
+  console.log("ABCD");
+  printFirstLetter("abcd");
+  console.log("AAAA");
+  printFirstLetter("AAAA");
+  console.log("aBcD");
+  printFirstLetter("aBcD");
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -57,12 +60,13 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
   // Funkcijos deklaravimas
   function printLastLetter(str) {
     // code ...
+    return console.log(str.slice(-1));
   }
-  // console.log('---');
-  // printLastLetter('Labas');
-  // printLastLetter('Ate');
-  // printLastLetter('Brieda');
-  // console.log('---');
+  console.log('---');
+  printLastLetter('Labas');
+  printLastLetter('Ate');
+  printLastLetter('Brieda');
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -72,12 +76,13 @@ console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduri
   // Funkcijos deklaravimas
   function printMiddleLetter(str) {
     // code ...
+    return console.log(str.slice(str.length / 2, str.length / 2 + 1));
   }
-  // console.log('---');
-  // printMiddleLetter('Labas');
-  // printMiddleLetter('Ate');
-  // printMiddleLetter('Brieda');
-  // console.log('---');
+  console.log('---');
+  printMiddleLetter('Labas');
+  printMiddleLetter('Ate');
+  printMiddleLetter('Brieda');
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -86,14 +91,15 @@ console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidži�
 {
   function getDoubleLetterCount(str) {
     // code ...
+    return str.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': getDoubleLetterCount('labas'),
+    'kranas': getDoubleLetterCount('kranas'),
+    'kebabas': getDoubleLetterCount('kebabas'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -102,14 +108,15 @@ console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidži�
 {
   function getDoubleLetterCount(str) {
     // code ...
+    return str.length * 2;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': getDoubleLetterCount('labas'),
+    'kranas': getDoubleLetterCount('kranas'),
+    'kebabas': getDoubleLetterCount('kebabas'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -118,14 +125,15 @@ console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro b
 {
   function getArgsLetterSum(a, b) {
     // code ...
+    return a.length + b.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, abc': getArgsLetterSum('labas', 'abc'),
-  //   'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
-  //   'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, abc': getArgsLetterSum('labas', 'abc'),
+    'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
+    'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -134,14 +142,15 @@ console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 
 {
   function containsLetterA(str) {
     // code ...
+    return str.includes('a');
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': containsLetterA('labas'),
-  //   'kempė': containsLetterA('kempė'),
-  //   'Finakolė': containsLetterA('Finakolė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': containsLetterA('labas'),
+    'kempė': containsLetterA('kempė'),
+    'Finakolė': containsLetterA('Finakolė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -150,14 +159,15 @@ console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra
 {
   function containsLetter(str, letter) {
     // code ...
+    return str.includes(letter);
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': containsLetter('labas', 'a'),
-  //   'kempė, a': containsLetter('kempė', 'a'),
-  //   'Finakolė, u': containsLetter('Finakolė', 'u'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': containsLetter('labas', 'a'),
+    'kempė, a': containsLetter('kempė', 'a'),
+    'Finakolė, u': containsLetter('Finakolė', 'u'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -166,14 +176,15 @@ console.group("11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra
 {
   function isEvenNumberOfLetters(str) {
     // code ...
+    return (str.length % 2 === 0)
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': isEvenNumberOfLetters('labas'),
-  //   'kempės': isEvenNumberOfLetters('kempės'),
-  //   '123123': isEvenNumberOfLetters('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': isEvenNumberOfLetters('labas'),
+    'kempės': isEvenNumberOfLetters('kempės'),
+    '123123': isEvenNumberOfLetters('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -182,14 +193,16 @@ console.group("12. Sukurkite funkciją, kuri grąžina balsių kiekį žodyje");
 {
   function getNumberOfVowels(str) {
     // code ...
+    const vow = str.match(/[ąaeėęįyouūų]/gi);
+    return vow === null ? 0 : vow.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfVowels('aaaaa'),
-  //   'sasasasa': getNumberOfVowels('sasasasa'),
-  //   'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'aaaaa': getNumberOfVowels('aaaaa'),
+    'sasasasa': getNumberOfVowels('sasasasa'),
+    'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -198,14 +211,16 @@ console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyj
 {
   function getNumberOfConsonants(str) {
     // code ...
+    const cono = str.match(/[bcčdfghjklmnprsštvwxzž]/gi);
+    return cono === null ? 0 : cono.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfConsonants('aaaaa'),
-  //   'sasasasa': getNumberOfConsonants('sasasasa'),
-  //   'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'aaaaa': getNumberOfConsonants('aaaaa'),
+    'sasasasa': getNumberOfConsonants('sasasasa'),
+    'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -214,6 +229,7 @@ console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skai�
 {
   function isOnlyLetters(str) {
     // ... code
+    return !/\d/.test(str);
   }
 
   console.log('---');
@@ -231,14 +247,16 @@ console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žod
 {
   function letterACount(str) {
     // code ...
+    const a = str.match(/[a]/gi);
+    return a === null ? 0 : a.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': letterACount('labas'),
-  //   'kempės': letterACount('kempės'),
-  //   '123123': letterACount('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': letterACount('labas'),
+    'kempės': letterACount('kempės'),
+    '123123': letterACount('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -247,14 +265,21 @@ console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį
 {
   function letterCount(str, searchLetter) {
     // code ...
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (str.charAt(i) === searchLetter) {
+        count++;
+      }
+    }
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': letterCount('labas', 'a'),
-  //   'kempės, k': letterCount('kempės', 'k'),
-  //   '123123, z': letterCount('123123', 'z'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': letterCount('labas', 'a'),
+    'kempės, k': letterCount('kempės', 'k'),
+    '123123, z': letterCount('123123', 'z'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -263,14 +288,15 @@ console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusė
 {
   function lastIndexOfLetterA(str) {
     // code ...
+    return str.indexOf('a');
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': lastIndexOfLetterA('labas'),
-  //   'kempės': lastIndexOfLetterA('kempės'),
-  //   '123123': lastIndexOfLetterA('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': lastIndexOfLetterA('labas'),
+    'kempės': lastIndexOfLetterA('kempės'),
+    '123123': lastIndexOfLetterA('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -279,14 +305,15 @@ console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusė
 {
   function lastIndexOfLetter(str, searchLetter) {
     // code ...
+    return str.indexOf(searchLetter);
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': lastIndexOfLetter('labas', 'a'),
-  //   'kempės, k': lastIndexOfLetter('kempės', 'k'),
-  //   '123123, z': lastIndexOfLetter('123123', 'z'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas, a': lastIndexOfLetter('labas', 'a'),
+    'kempės, k': lastIndexOfLetter('kempės', 'k'),
+    '123123, z': lastIndexOfLetter('123123', 'z'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -295,14 +322,15 @@ console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 {
   function indexesOfLetterA(str) {
     // code ...
+
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': indexesOfLetterA('labas'),
-  //   'kempės': indexesOfLetterA('kempės'),
-  //   '123123': indexesOfLetterA('123123'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'labas': indexesOfLetterA('labas'),
+    'kempės': indexesOfLetterA('kempės'),
+    '123123': indexesOfLetterA('123123'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
