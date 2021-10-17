@@ -204,18 +204,27 @@ console.groupEnd();
 console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.faculty === 'Informatikos fakultetas');
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('2. Atspausdinti visus Chemijos fakulteto studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.faculty === 'Chemijos fakultetas');
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.faculty === 'Elektros ir elektronikos fakultetas');
+  
+  console.table(result);
 }
 console.groupEnd();
 
@@ -223,46 +232,101 @@ console.groupEnd();
 console.groupCollapsed('4. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius');
 {
   // ... sprendimas ir spausdinimas
+  const result = students
+    .filter(s => s.faculty === 'Elektros ir elektronikos fakultetas')
+    .map(({ name, surname, modules }) => ({ fullname: name + ' ' + surname, modules }))
+    .map(({ fullname, modules }) => ({
+      fullname,
+      avg: Math.round(
+        modules.reduce((avgSum, { marks, credits }) => avgSum + marks.reduce((avg, m) => avg + m / marks.length, 0) * credits, 0)
+        / modules.reduce((creditSum, module) => creditSum + module.credits, 0) * 10
+      ) / 10
+    }))
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('5. Atspausdinti tik pirmo kurso studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.course === 1);
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinti tik antro kurso studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.course === 2);
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinti tik trečio kurso studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.course === 3);
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinti tik ketvirto kurso studentus');
 {
   // ... sprendimas ir spausdinimas
+  const result = students.filter(s => s.course === 4);
+  
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinti visų Informatikos fakulteto studentų vidurkius');
 {
   // ... sprendimas ir spausdinimas
+  const result = students
+    .filter(s => s.faculty === 'Informatikos fakultetas')
+    .map(({ name, surname, modules }) => ({ fullname: name + ' ' + surname, modules }))
+    .map(({ fullname, modules }) => ({
+      fullname,
+      avg: Math.round(
+        modules.reduce((avgSum, { marks, credits }) => avgSum + marks.reduce((avg, m) => avg + m / marks.length, 0) * credits, 0)
+        / modules.reduce((creditSum, module) => creditSum + module.credits, 0) * 10
+      ) / 10
+    }))
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('10. Atspausdinti visų Chemijos fakulteto studentų vidurkius');
 {
   // ... sprendimas ir spausdinimas
+  const result = students
+    .filter(s => s.faculty === 'Chemijos fakultetas')
+    .map(({ name, surname, modules }) => ({ fullname: name + ' ' + surname, modules }))
+    .map(({ fullname, modules }) => ({
+      fullname,
+      avg: Math.round(
+        modules.reduce((avgSum, { marks, credits }) => avgSum + marks.reduce((avg, m) => avg + m / marks.length, 0) * credits, 0)
+        / modules.reduce((creditSum, module) => creditSum + module.credits, 0) * 10
+      ) / 10
+    }))
+  console.table(result);
 }
 console.groupEnd();
 
 console.groupCollapsed('11. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
 {
   // ... sprendimas ir spausdinimas
+  const result = students
+    .map(({ name, surname, modules }) => ({ fullname: name + ' ' + surname, modules }))
+    .map(({ fullname, modules }) => ({
+      fullname,
+      avg: Math.round(
+        modules.reduce((avgSum, { marks, credits }) => avgSum + marks.reduce((avg, m) => avg + m / marks.length, 0) * credits, 0)
+        / modules.reduce((creditSum, module) => creditSum + module.credits, 0) * 10
+      ) / 10
+    }))
+  console.table(result);
 }
